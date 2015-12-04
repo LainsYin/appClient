@@ -75,17 +75,9 @@ def verify_data(data):
     parts = struct.unpack("6I", data[0:24])
     parts = [str(socket.ntohl(x)) for x in parts]
     header = ', '.join(parts)
-    body = ''
-    try:
-        body = json.loads(data[24:])
-        print header
-        print body
-    except:
-        logging.error('received data body is not JSON string')
-        return ''
 
-    logging.debug('received data :  header:%s ' % header)
-    logging.debug('received data :  body:%s' % (json.dumps(body, indent=4)))
+    logging.info('received data :  header:%s ' % header)
+    logging.info('received data :  body:%s' % data[24:])
 
 
 class Client(threading.Thread):
@@ -158,9 +150,13 @@ if __name__ == '__main__':
     conf = ConfigParser.ConfigParser()
     conf.read("./config.ini")
     fun_num = opts.fun
-    header_str = conf.get("%s" % fun_num, "header").split(",")
-    header = [int(x) for x in header_str]
-    body = conf.get("%s" % fun_num, "body")
+    try:
+        header_str = conf.get("%s" % fun_num, "header").split(",")
+        body = conf.get("%s" % fun_num, "body")
+        header = [int(x) for x in header_str]
+    except Exception, e:
+        logging.info(e)
+        exit(1)
 
     for i in xrange(opts.num):
         client = Client(opts.host, opts.port)

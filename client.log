@@ -1,13 +1,8 @@
-[Fri, 04 Dec 2015 11:50:57 - 8526   - MainThread - INFO    ]	start 1 threads to server 192.168.1.156:3050 ...
-[Fri, 04 Dec 2015 11:50:57 - 8526   - MainThread - INFO    ]	new connection 1 to 192.168.1.156:3050
-[Fri, 04 Dec 2015 11:50:57 - 8526   - MainThread - INFO    ]	Waiting for 1 second
-[Fri, 04 Dec 2015 11:50:58 - 8526   - MainThread - DEBUG   ]	send header: (6 : 17, 100, 90003, 65536, 21, 520) to 192.168.1.156:3050
-[Fri, 04 Dec 2015 11:50:58 - 8526   - MainThread - DEBUG   ]	send body: (21 : {"touid": "60HNr67d"}) to 192.168.1.156:3050
-[Fri, 04 Dec 2015 11:50:58 - 8526   - Thread-1   - DEBUG   ]	received data :  header:17, 100, 90003, 65536, 113, 520 
-[Fri, 04 Dec 2015 11:50:58 - 8526   - Thread-1   - DEBUG   ]	received data :  body:{
-    "status": 0, 
-    "server": "http://192.168.1.199", 
-    "id": 1, 
-    "infoserver": "http://192.168.1.199"
-}
-[Fri, 04 Dec 2015 11:51:00 - 8526   - MainThread - INFO    ]	stop ...
+[Fri, 04 Dec 2015 14:42:43 - 8754   - MainThread - INFO    ]	start 1 threads to server 192.168.1.156:11235 ...
+[Fri, 04 Dec 2015 14:42:43 - 8754   - MainThread - INFO    ]	new connection 1 to 192.168.1.156:11235
+[Fri, 04 Dec 2015 14:42:43 - 8754   - MainThread - INFO    ]	Waiting for 1 second
+[Fri, 04 Dec 2015 14:42:44 - 8754   - MainThread - DEBUG   ]	send header: (6 : 17, 100, 10001, 65536, 39, 4294967295) to 192.168.1.156:11235
+[Fri, 04 Dec 2015 14:42:44 - 8754   - MainThread - DEBUG   ]	send body: (39 : <root><serialid>12333</serialid></root>) to 192.168.1.156:11235
+[Fri, 04 Dec 2015 14:42:44 - 8754   - Thread-1   - INFO    ]	received data :  header:17, 100, 10001, 65536, 49, 4294967295 
+[Fri, 04 Dec 2015 14:42:44 - 8754   - Thread-1   - INFO    ]	received data :  body:<root><status>0</status><result>2</result></root>
+[Fri, 04 Dec 2015 14:44:08 - 8754   - MainThread - INFO    ]	stop ...
