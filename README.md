@@ -33,8 +33,8 @@ $ ./client.py -f 90003
 INFO     start 1 threads to server 192.168.1.156:3050 ...
 INFO     new connection 1 to 192.168.1.156:3050
 INFO     Waiting for 1 second
-17, 100, 90003, 65536, 113, 520
-{u'status': 0, u'server': u'http://192.168.1.199', u'id': 1, u'infoserver': u'http://192.168.1.199'}
+INFO     received data :  17, 100, 90003, 65536, 113, 520
+INFO     received data :  {u'status': 0, u'server': u'http://192.168.1.199', u'id': 1, u'infoserver': u'http://192.168.1.199'}
 
 $ ./client.py -p 11235 -f 10001
 INFO     start 1 threads to server 192.168.1.156:11235 ...
