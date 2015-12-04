@@ -1,0 +1,10 @@
+[Thu, 03 Dec 2015 20:53:19 - 7450   - MainThread - INFO    ]	start 1 threads to server 192.168.1.156:3050 ...
+[Thu, 03 Dec 2015 20:53:19 - 7450   - MainThread - INFO    ]	new connection 1 to 192.168.1.156:3050
+[Thu, 03 Dec 2015 20:53:20 - 7450   - MainThread - DEBUG   ]	send header: (24 : 17, 100, 90001, 65536, 58, 520) to 192.168.1.156:3050
+[Thu, 03 Dec 2015 20:53:20 - 7450   - MainThread - DEBUG   ]	send body: (3 : {'message': 'hello world', 'type': 1, 'touid': '60HNr67d'}) to 192.168.1.156:3050
+[Thu, 03 Dec 2015 20:53:20 - 7450   - Thread-1   - DEBUG   ]	header:17, 100, 90001, 65536, 58, 520 body:{
+    "status": 0, 
+    "type": 1, 
+    "uid": "60HNr67d"
+}
+[Thu, 03 Dec 2015 20:56:25 - 7450   - MainThread - INFO    ]	stop ...
