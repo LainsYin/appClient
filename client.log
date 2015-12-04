@@ -1,10 +1,13 @@
-[Thu, 03 Dec 2015 20:53:19 - 7450   - MainThread - INFO    ]	start 1 threads to server 192.168.1.156:3050 ...
-[Thu, 03 Dec 2015 20:53:19 - 7450   - MainThread - INFO    ]	new connection 1 to 192.168.1.156:3050
-[Thu, 03 Dec 2015 20:53:20 - 7450   - MainThread - DEBUG   ]	send header: (24 : 17, 100, 90001, 65536, 58, 520) to 192.168.1.156:3050
-[Thu, 03 Dec 2015 20:53:20 - 7450   - MainThread - DEBUG   ]	send body: (3 : {'message': 'hello world', 'type': 1, 'touid': '60HNr67d'}) to 192.168.1.156:3050
-[Thu, 03 Dec 2015 20:53:20 - 7450   - Thread-1   - DEBUG   ]	header:17, 100, 90001, 65536, 58, 520 body:{
+[Fri, 04 Dec 2015 11:50:57 - 8526   - MainThread - INFO    ]	start 1 threads to server 192.168.1.156:3050 ...
+[Fri, 04 Dec 2015 11:50:57 - 8526   - MainThread - INFO    ]	new connection 1 to 192.168.1.156:3050
+[Fri, 04 Dec 2015 11:50:57 - 8526   - MainThread - INFO    ]	Waiting for 1 second
+[Fri, 04 Dec 2015 11:50:58 - 8526   - MainThread - DEBUG   ]	send header: (6 : 17, 100, 90003, 65536, 21, 520) to 192.168.1.156:3050
+[Fri, 04 Dec 2015 11:50:58 - 8526   - MainThread - DEBUG   ]	send body: (21 : {"touid": "60HNr67d"}) to 192.168.1.156:3050
+[Fri, 04 Dec 2015 11:50:58 - 8526   - Thread-1   - DEBUG   ]	received data :  header:17, 100, 90003, 65536, 113, 520 
+[Fri, 04 Dec 2015 11:50:58 - 8526   - Thread-1   - DEBUG   ]	received data :  body:{
     "status": 0, 
-    "type": 1, 
-    "uid": "60HNr67d"
+    "server": "http://192.168.1.199", 
+    "id": 1, 
+    "infoserver": "http://192.168.1.199"
 }
-[Thu, 03 Dec 2015 20:56:25 - 7450   - MainThread - INFO    ]	stop ...
+[Fri, 04 Dec 2015 11:51:00 - 8526   - MainThread - INFO    ]	stop ...
