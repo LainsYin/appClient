@@ -41,7 +41,6 @@ def register_options():
                       type="int",
                       default=3050, help="specify port, default is 3050")
     parser.add_option("-f", "--fun", dest="fun",
-                      type="int",
                       default=90001, help="specify function num, default is 90001")
     parser.add_option("-n", "--num", dest="num",
                       type="int",
@@ -149,14 +148,7 @@ if __name__ == '__main__':
 
     conf = ConfigParser.ConfigParser()
     conf.read("./config.ini")
-    fun_num = opts.fun
-    try:
-        header_str = conf.get("%s" % fun_num, "header").split(",")
-        body = conf.get("%s" % fun_num, "body")
-        header = [int(x) for x in header_str]
-    except Exception, e:
-        logging.info(e)
-        exit(1)
+    fun_num = [int(x) for x in opts.fun.split(",")]
 
     for i in xrange(opts.num):
         client = Client(opts.host, opts.port)
@@ -172,8 +164,15 @@ if __name__ == '__main__':
     signal.signal(signal.SIGINT, sig_handler)
     logging.info("Waiting for 1 second")
     time.sleep(1)
-    THREADS[0].send(header, body)
-    # in_text = raw_input()
+    for fn in fun_num:
+        try:
+            header_str = conf.get("%s" % fn, "header").split(",")
+            body = conf.get("%s" % fn, "body")
+            header = [int(x) for x in header_str]
+        except Exception, e:
+            logging.info(e)
+            exit(1)
+        THREADS[0].send(header, body)
 
 # master thread to catch signal
     while not STOP:
