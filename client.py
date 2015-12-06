@@ -138,7 +138,7 @@ class Client(threading.Thread):
                     verify_data(rec_buf)
             except :
                 pass
-                # logging.error('recv data error %s' % e)
+                # logging.error('recv data error')
 
 
 if __name__ == '__main__':
@@ -170,10 +170,10 @@ if __name__ == '__main__':
     """
     signal.signal(signal.SIGTERM, sig_handler)
     signal.signal(signal.SIGINT, sig_handler)
-
     logging.info("Waiting for 1 second")
     time.sleep(1)
     THREADS[0].send(header, body)
+    # in_text = raw_input()
 
 # master thread to catch signal
     while not STOP:
